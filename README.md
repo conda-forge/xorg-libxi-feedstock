@@ -14,14 +14,16 @@ Summary: The X.org input library.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/xorg-libxi-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/xorg-libxi-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/xorg-libxi-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/xorg-libxi-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/xorg-libxi-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/xorg-libxi-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/xorg-libxi-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/xorg-libxi-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/xorg-libxi-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/xorg-libxi-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/xorg-libxi-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/xorg-libxi-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xorg-libxi/badges/version.svg)](https://anaconda.org/conda-forge/xorg-libxi)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xorg-libxi/badges/downloads.svg)](https://anaconda.org/conda-forge/xorg-libxi)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-xorg--libxi-green.svg)](https://anaconda.org/conda-forge/xorg-libxi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/xorg-libxi.svg)](https://anaconda.org/conda-forge/xorg-libxi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/xorg-libxi.svg)](https://anaconda.org/conda-forge/xorg-libxi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/xorg-libxi.svg)](https://anaconda.org/conda-forge/xorg-libxi) |
 
 Installing xorg-libxi
 =====================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
