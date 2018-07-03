@@ -29,6 +29,7 @@ requirements:
     - {{ compiler('c') }}        # [unix]
     - {{ compiler('m2w64_c') }}  # [win]
   host:
+    - pthread-stubs
     - xorg-inputproto
     - xorg-kbproto
     - xorg-libx11 1.6.*
