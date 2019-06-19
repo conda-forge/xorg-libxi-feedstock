@@ -1,8 +1,8 @@
 {% set xorg_name = "libXi" %}
 {% set xorg_category = "lib" %}
 {% set name = "xorg-" ~ xorg_name %}
-{% set version = "1.7.9" %}
-{% set sha256 = "c2e6b8ff84f9448386c1b5510a5cf5a16d788f76db018194dacdc200180faf45" %}
+{% set version = "1.7.10" %}
+{% set sha256 = "36a30d8f6383a72e7ce060298b4b181fd298bc3a135c8e201b7ca847f5f81061" %}
 {% set am_version = "1.15" %} # keep synchronized with build.sh
 
 package:
@@ -15,7 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
+  number: 0
   detect_binary_files_with_prefix: true
 
 requirements:
