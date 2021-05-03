@@ -1,4 +1,6 @@
 #! /bin/bash
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/gnuconfig/config.* .
 
 set -e
 IFS=$' \t\n' # workaround for conda 4.2.13+toolchain bug
@@ -69,10 +71,16 @@ configure_args=(
     --disable-silent-rules
 )
 
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" == "1" ]] ; then
+    configure_args+=(--enable-malloc0returnsnull)
+fi
+
 ./configure "${configure_args[@]}"
 make -j$CPU_COUNT
 make install
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
 make check
+fi
 
 rm -rf $uprefix/share/man $uprefix/share/doc/libXi
 
