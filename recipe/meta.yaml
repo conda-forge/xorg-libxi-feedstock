@@ -15,8 +15,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
+  run_exports:
+    - {{ pin_subpackage(name|lower) }}
 
 requirements:
   build:
@@ -27,7 +29,9 @@ requirements:
     - pkg-config  # [not win]
     - posix  # [win]
     - gnuconfig  # [unix]
+    - {{ stdlib('c') }}          # [unix]
     - {{ compiler('c') }}        # [unix]
+    - {{ stdlib('m2w64_c') }}    # [win]
     - {{ compiler('m2w64_c') }}  # [win]
     - make                          # [unix]
     - autoconf                      # [unix]
