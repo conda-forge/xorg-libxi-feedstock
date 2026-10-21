@@ -40,19 +40,6 @@ if [ -n "$CYGWIN_PREFIX" ] ; then
 else
     # Get an updated config.sub and config.guess
     cp $BUILD_PREFIX/share/gnuconfig/config.* .
-
-    # for other platforms we just need to reconf to get the correct achitecture
-    echo libtoolize
-    libtoolize
-    echo aclocal -I $PREFIX/share/aclocal -I $BUILD_PREFIX/share/aclocal
-    aclocal -I $PREFIX/share/aclocal -I $BUILD_PREFIX/share/aclocal
-    echo autoheader
-    autoheader
-    echo autoconf
-    autoconf
-    echo automake --force-missing --add-missing --include-deps
-    automake --force-missing --add-missing --include-deps
-
     export CONFIG_FLAGS="--build=${BUILD}"
 fi
 

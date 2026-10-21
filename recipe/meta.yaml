@@ -1,8 +1,8 @@
 {% set xorg_name = "libXi" %}
 {% set xorg_category = "lib" %}
 {% set name = "xorg-" ~ xorg_name %}
-{% set version = "1.8.3" %}
-{% set sha256 = "7ad60056f01af4f786cfe93b3a7707447711626fc8da2637bec71a90409babe5" %}
+{% set version = "1.8.4" %}
+{% set sha256 = "ddd6057b89a91903bc2f884d55c8467440906945e482c36547260dff28661afc" %}
 {% set am_version = "1.16" %} # keep synchronized with build.sh
 
 package:
@@ -14,7 +14,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage(name|lower) }}
 
